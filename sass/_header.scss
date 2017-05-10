@@ -1,0 +1,200 @@
+
+/*header*/
+.bg-top-bar {
+  background: map-get($color, gray);
+  .us {
+    .us-item {
+      display: inline-block;
+      text-transform: uppercase;
+      color: map-get($color, gray_mo);
+      padding: 11px 20px 11px 20px;
+      border: none;
+      outline: none;
+      background: map-get($color, gray);
+      font-size: 14px;
+      border-right: 1px solid map-get($color, gray_c);
+      overflow: hidden;
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        &:hover {
+          display: block;
+        }
+        a {
+          text-decoration: none;
+          display: block;
+          color: map-get($color, gray);
+          padding: 14px 16px;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: map-get($color, gray_mo);
+        &:hover {
+        color: map-get($color, orange);
+      }
+    }
+   }
+   .sub-menu {
+      position: absolute;
+      display: none;
+      width: 88px;
+      height: 100px;
+      background-color: map-get($color, white);
+      padding: 5px 20px;
+      top: 45px;
+      left: 193px;
+      list-style: none;
+      border: 1px solid;
+      box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75);
+      line-height: 1.5;
+    .sub-menu-item {
+      border-bottom: 1px solid map-get($color, gray);
+      a {
+        color: #141414;
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        text-transform: lowercase;
+        &:hover {
+          color: map-get($color, green_2);
+        }
+       }
+    }
+  }
+  .us-item:hover .sub-menu {
+    display: block;
+  }
+   .us-item:first-child {
+      border-left: 1px solid map-get($color, gray_c);
+    }
+  }
+  .menu-bar {
+    margin: 0;
+    padding: 0;
+    .menu-bar-item {
+      display: inline-block;
+      list-style: none;
+      height: 44px;
+      border-left: 1px solid map-get($color, gray_c);
+      text-transform: uppercase;
+      .span {
+        border: 1px solid map-get($color, gray_mo);
+        display: inline-block;
+        margin-left: 3px;
+        height: 22px;
+        border-radius: 2px;
+        line-height: 1.6;
+        padding: 0 7px 0 7px;
+        &:hover {
+          background: map-get($color, orange);
+          color: map-get($color, white);
+        }
+       }
+      a {
+        padding: 13px 10px 15px 20px;
+        display: block;
+        height: 44px;
+        text-decoration: none;
+        color: map-get($color, gray_mo);
+        &:hover {
+          color: map-get($color, orange);
+        }
+      }
+    }
+    .menu-bar-item:last-child {
+      border-right: 1px solid map-get($color, gray_c);
+    }
+  }
+}
+.bg-top-menu {
+    background: map-get($color, black_gray);
+    height: 100px;
+    .logo {
+      padding: 28px 18px;
+    }
+    .menu {
+      margin: 0;
+      padding: 0;
+      .menu-item {
+        display: inline-block;
+        margin: 38px 20px;
+        .active {
+          color: map-get($color, orange);
+          border-bottom: 4px solid map-get($color, orange);
+        }
+        a {
+          font-size: 16px;
+          color: map-get($color, white);
+          text-transform: uppercase;
+          text-decoration: none;
+          display: block;
+          height: 58px;
+          &:hover {
+            color: map-get($color, orange);
+            border-bottom: 4px solid map-get($color, orange);
+          }
+        }
+      }
+      .menu-item:last-child {
+        font-size: 17px;
+        &:hover {
+          color: map-get($color, white);
+        }
+      }
+    }
+ }
+.desktop {
+  display: block;
+  text-align: center;
+  height: 220px;
+  background: map-get($color, gray_d);
+  .title-desktop {
+    font-size: 24px;
+    padding: 30px 0 10px;
+    text-transform: uppercase;
+    font-family: 'latoblack';
+  }
+  .menu-desktop {
+    margin: 0;
+    padding: 0;
+  }
+  .menu-desktop-item {
+    list-style: none;
+    display: inline-block;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 10px 5px;
+      color: map-get($color, gray_compare);
+      &:hover {
+      color: map-get($color, black);
+      }
+      &:before {
+        content:"\f015";
+        font-size: 12px;
+        padding-right: 3px;
+        font: 14px/1 FontAwesome;
+      }
+    }
+  }
+  .menu-desktop-item:last-child {
+    list-style: none;
+    display: inline-block;
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 10px 5px;
+      &:before {
+        content:"\f0a9";
+        font-size: 12px;
+        padding-right: 3px;
+        font: 14px/1 FontAwesome;
+      }
+    }
+  }
+}
