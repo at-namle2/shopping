@@ -1,5 +1,6 @@
 @import "variable";
 @import "global";
+@import "font";
 
 .row::after {
   content: '';
@@ -31,7 +32,10 @@
   .dropdown {
     display: inline-block;
     height: 44px;
-    border-right: 1px solid map-get($color, gray_baba);
+    border-right: 1px solid map-get($color, gray_c);
+  }
+  .dropdown:first-child {
+    border-left: 1px solid map-get($color, gray_c);
   }
   .us {
     display: block;
@@ -54,7 +58,7 @@
       display: inline-block;
       list-style: none;
       height: 44px;
-      border-left: 1px solid map-get($color, gray_baba);
+      border-left: 1px solid map-get($color, gray_c);
       text-transform: uppercase;
       .span {
         border: 1px solid map-get($color, gray_mo);
@@ -79,6 +83,9 @@
           color: map-get($color, orange);
         }
       }
+    }
+    .menu-bar-item:last-child {
+      border-right: 1px solid map-get($color, gray_c);
     }
   }
 }
@@ -111,6 +118,12 @@
           }
         }
       }
+      .menu-item:last-child {
+        font-size: 17px;
+        &:hover {
+          color: map-get($color, white);
+        }
+      }
     }
  }
 .desktop {
@@ -121,6 +134,8 @@
   .title-desktop {
     font-size: 24px;
     padding: 30px 0 10px;
+    text-transform: uppercase;
+    font-family: 'latoblack';
   }
   .menu-desktop {
     margin: 0;
@@ -133,7 +148,7 @@
       text-decoration: none;
       text-transform: uppercase;
       padding: 10px 5px;
-      color: map-get($color, gray_mo);
+      color: map-get($color, gray_compare);
       &:hover {
       color: map-get($color, black);
       }
@@ -166,6 +181,7 @@
   .title-heading {
     font-size: 24px;
     padding: 30px 0 0;
+    font-family: 'latoblack';
   }
   .list {
     .list-item {
@@ -184,7 +200,7 @@
               display: inline-block;
               font-size: 18px;
               text-transform: uppercase;
-            }
+          }
           &:before {
             content: '';
             position: absolute;
@@ -198,14 +214,21 @@
         .catery-text1 {
           padding: 21px 0 20px 0;
           border-bottom: 1px solid map-get($color, gray_b);
+          .check {
+            margin-right: 10px;
+          }
         }
         .catery-text2 {
           padding: 21px 0 20px 0;
+          .check {
+            margin-right: 10px;
+          }
         }
       }
     }
   }
 }
+
 .img {
   margin: 30px 0 30px;
 }
@@ -236,6 +259,9 @@
     text-decoration: none;
     color: map-get($color, gray_compare);
     text-transform: uppercase;
+    &:hover {
+      color: map-get($color, black);
+    }
   }
   .selected {
     height: 38px;
@@ -244,7 +270,7 @@
     outline: none;
     text-transform: uppercase;
     display: inline-block;
-    color: map-get($color, gray_b);
+    color: map-get($color, gray_compare);
     border: 1px solid map-get($color, gray_b);
   }
   .selected2 {
@@ -254,8 +280,69 @@
     outline: none;
     text-transform: uppercase;
     display: inline-block;
-    color: map-get($color, gray_b);
+    color: map-get($color, gray_compare);
     border: 1px solid map-get($color, gray_b);
+  }
+}
+
+.image {
+  position: relative;
+  .images {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+  .middle {
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 66%;
+    transform: translate(-50%, -50%);
+    &:hover {
+      opacity: 1;
+    }
+    .only {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      .only-item {
+        display: inline-block;
+        padding: 5px 4px 5px 3px;
+        vertical-align: top;
+        background-color: map-get($color, white);
+        color: white;
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+        &:hover {
+          background: map-get($color, orange);
+        }
+        a {
+          margin: 15px 9px;
+          display: inline-block;
+        }
+        i {
+          color: map-get($color, black);
+          &:hover {
+             color: map-get($color, white);
+          }
+        }
+      }
+      .only-item:last-child {
+        background-color: map-get($color, orange);
+        i {
+           color: map-get($color, white);
+        }
+      }
+    }
   }
 }
 .title-products {
@@ -263,11 +350,16 @@
   text-transform: uppercase;
   font-size: 17px;
   padding: 25px 0 4px;
+  font-family: "roboto";
+  &:hover {
+    color: map-get($color, orange);
+  }
 }
 .desc {
   display: block;
   text-align: center;
   padding-bottom: 30px;
+  font-family: "roboto";
   .price-news {
     color: map-get($color, orange);
   }
@@ -323,20 +415,23 @@
       text-transform: uppercase;
       font-size: 34px;
       color: map-get($color, white);
+      font-family: "labo";
     }
     .up {
-    font-size: 22px;
-    padding: 11px 0px 0px 0px;
-    margin: 0px;
-    text-transform: none;
-    .special {
-      color: map-get($color, organge);
+      font-size: 24px;
+      padding: 11px 0px 0px 0px;
+      margin: 0px;
+      text-transform: none;
+      font-family: "playball";
+      color: map-get($color, white);
+      letter-spacing: 2px;
+      .special {
+        color: map-get($color, organge);
+      }
     }
-   }
   }
   .lorem {
-    padding: 0px 0px 50px 0px;
-    margin: 0px auto;
+    padding: 6px 0px 50px 0px;
     font-size: 18px;
     color: map-get($color, lorem);
    }
@@ -351,7 +446,7 @@
     color: map-get($color, white);
   }
   .button-subscribe {
-    height: 42px;
+    height: 44px;
     border-radius: 2px;
     padding: 10px 43px 9px 43px;
     border: none;
@@ -361,6 +456,7 @@
     color: map-get($color, white);
     background: map-get($color, organge);
     cursor: pointer;
+    font-family: "lato";
     &:hover {
       color: map-get($color, white);
       background: map-get($color, black_gray);
@@ -369,10 +465,10 @@
 }
 /*footer*/
 .footer-goshop {
-  background: map-get($color, blacks);
+  background: map-get($color, black_2);
   .shop {
     padding: 80px 0 35px;
-    border-bottom: 1px solid map-get($color, gray_b);
+    border-bottom: 1px solid map-get($color, grays_c);
   }
   .oc {
     padding: 20px 0 14px;
@@ -396,6 +492,10 @@
         text-align: center;
         background: transparent;
         line-height: 2.2;
+        &:hover {
+          background-color: map-get($color, organge);
+          color: map-get($color, white);
+        }
       }
     }
   }
@@ -403,10 +503,13 @@
     color: map-get($color, white);
     font-size: 16px;
     padding: 0 0 25px;
+    font-family: 'lato';
   }
   .dolor {
     color: map-get($color, grays_b);
     padding-bottom: 25px;
+    line-height: 1.8;
+    font-size: 14px;
   }
   .account {
     margin: 0;
@@ -417,7 +520,6 @@
       padding: 0 0 4px;
       a {
         text-decoration: none;
-        font-size: 15px;
         color: map-get($color, grays_b);
         &:hover {
           color: map-get($color, white);
@@ -432,7 +534,7 @@
       width: 180px;
       outline: none;
       border: none;
-      background: map-get($color, black_i);
+      background: map-get($color, black_3);
       text-indent: 10px;
       color: map-get($color, white);
       font-size: 14px;
@@ -450,20 +552,52 @@
     .ton {
       background-color: map-get($color, orange);
       border: none;
+      cursor: pointer;
     }
   }
   .pay {
+    display: block;
+    text-align: center;
+    position: relative;
     .payment {
       margin: 0;
       padding: 0;
+      &:before {
+        content: "←";
+        position: absolute;
+        top: 40px;
+        left: 0;
+        cursor: pointer;
+      }
       &:after {
-        content: "red";
+        content: "→";
+        position: absolute;
+        top: 40px;
+        right: 0;
+        cursor: pointer;
       }
     .payment-item {
       list-style: none;
       display: inline-block;
-      margin: 40px 75px 30px 0;
+      padding: 30px;
+      img {
+        opacity: 0.1;
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
    }
+  }
+}
+.open {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  padding: 30px;
+  background-color: map-get($color, black_1);
+  a {
+    color: map-get($color, orange);
+    text-decoration: none;
   }
 }

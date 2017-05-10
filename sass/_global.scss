@@ -5,12 +5,12 @@
 body {
   color: map-get($color, grays);
   font-size: 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'lato';
   line-height: 1.4;
 }
 h1, h2, h3 , h4 , h5 , h6 {
   text-transform: uppercase;
-  font-family: Roboto;
+  font-family: "roboto";
 }
 .container {
   width: 1170px;
