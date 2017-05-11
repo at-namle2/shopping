@@ -191,7 +191,7 @@
     color: map-get($color, orange);
   }
   .price-old {
-    color: map-get($color, gray_mo);
+    color: map-get($color, gray_f);
     text-decoration: line-through;
     margin-left: 6px;
   }
@@ -230,7 +230,7 @@
   }
 }
 .newletter {
-  background-image: url(../images/category/newsletter.png);
+  background-image: url(../images/category/newsletter.png) no-repeat;
   height: 500px;
   .letter {
     display: block;
