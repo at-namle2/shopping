@@ -112,6 +112,10 @@
 .image {
   position: relative;
   width: 100%;
+  &:hover {
+    border-bottom: 3px solid map-get($color, orange);
+    transition: all 0.2s ease-in;
+  }
   .images {
     opacity: 1;
     display: block;
@@ -281,6 +285,7 @@
     cursor: pointer;
     font-family: "lato";
     font-size: 14px;
+    transition: all 0.2s ease-in;
     &:hover {
       color: map-get($color, white);
       background: map-get($color, black_gray);

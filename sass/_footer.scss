@@ -85,6 +85,7 @@
       border-radius: 2px;
       display: inline-block;
       vertical-align: bottom;
+      transition: all 0.2s ease-in;
     }
     .ton {
       background-color: map-get($color, orange);
@@ -122,6 +123,7 @@
       padding: 30px;
       img {
         opacity: 0.1;
+        transition: all 0.2s ease-in;
         &:hover {
           opacity: 1;
         }

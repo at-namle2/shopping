@@ -34,12 +34,15 @@
           color: map-get($color, gray_mo);
           &:hover {
              background-color: map-get($color, orange);
-            }
           }
+        }
+        img {
+          margin-right: 10px;
         }
       }
     }
-  .euro:hover .dropdown-content {
+  }
+  .dropdown:hover .dropdown-content {
     display: block;
     }
   }
@@ -80,10 +83,11 @@
         .dropdown-contents {
           display: none;
           position: absolute;
-          background-color: map-get($color, white);
-          width: 200px;
-          height: 70px;
+          background-color: #fff;
+          width: 240px;
+          height: 78px;
           padding: 12px 16px;
+          left: -80px;
           z-index: 1;
           top: -24px;
           text-transform: lowercase;
@@ -94,7 +98,6 @@
           }
         }
       }
-
     }
     .menu-bar-item:hover .dropdown-contents {
         display: block;
@@ -115,6 +118,7 @@
       .menu-item {
         display: inline-block;
         margin: 38px 20px;
+        transition: all 0.2s ease-in;
         .active {
           color: map-get($color, orange);
           border-bottom: 4px solid map-get($color, orange);
@@ -163,6 +167,7 @@
       text-transform: uppercase;
       padding: 10px 5px;
       color: map-get($color, gray_e);
+      transition: all 0.2s ease-in;
       &:hover {
       color: map-get($color, black);
       }
