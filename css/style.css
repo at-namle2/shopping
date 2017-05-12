@@ -380,7 +380,7 @@ h1, h2, h3, h4, h5, h6 {
           color: #3e3e3e; }
 
 .newletter {
-  background-image: url(../images/category/newsletter.png);
+  background-image: url(../images/category/newsletter.png) no-repeat;
   height: 500px; }
   .newletter .letter {
     display: block;
